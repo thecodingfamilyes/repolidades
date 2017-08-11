@@ -7,6 +7,7 @@ echo "Start the update and the install"
 composer install --no-interaction --optimize-autoloader
 
 # Copy over testing configuration.
+touch .env
 #cp .env.testing .env
 
 # Generate an application key. Re-cache.
