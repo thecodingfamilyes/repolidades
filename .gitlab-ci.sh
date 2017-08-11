@@ -4,7 +4,6 @@ set -eo pipefail
 
 # Install php libraries.
 echo "Start the update and the install"
-composer config -g github-oauth.github.com $gitHubKey
 composer install --no-interaction --optimize-autoloader
 
 # Copy over testing configuration.
