@@ -9,7 +9,7 @@ variables:
   MYSQL_DATABASE: juanisoler
   MYSQL_ROOT_PASSWORD: secret
 
-phpunit:php7.1:mysq:latest:
+phpunit:
   stage: phpunit
   only:
     - develop
