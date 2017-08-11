@@ -11,8 +11,6 @@ variables:
 
 phpunit:
   stage: phpunit
-  only:
-    - develop
   image: zaherg/php-7.1-xdebug-alpine:latest
   services:
     - mysql:latest
