@@ -1,20 +1,35 @@
 before_script:
-  - bash .gitlab-ci.sh
+  - '[[ ! -e /.dockerenv ]] && exit 0'
+
+stages:
+  - phpunit
+  # - deploy
 
 variables:
   MYSQL_DATABASE: juanisoler
   MYSQL_ROOT_PASSWORD: secret
 
-phpunit:php7.0:mysql5.6:
-  image: php:7.0
+phpunit:php7.1:mysq:latest:
+  stage: phpunit
+  only:
+    - develop
+  image: zaherg/php-7.1-xdebug-alpine:latest
   services:
     - mysql:latest
   script:
-    - php vendor/bin/phpunit --colors
+    - sh .gitlab-ci.sh
 
-phpunit:php7.1:mysql5.6:
-  image: php:7.1
-  services:
-    - mysql:latest
-  script:
-    - php vendor/bin/phpunit --colors
+deploy_develop:
+   stage: deploy
+   before_script:
+     - mkdir -p ~/.ssh
+     - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+     - chmod 600 ~/.ssh/id_rsa
+     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+   script:
+     - ssh sshuser@$DEV_SERVER "cd ~/www && git pull origin develop && ~/bin/composer install"
+   environment:
+     name: develop
+     url: https://staging.juanisoler.com/
+   only:
+     - develop
