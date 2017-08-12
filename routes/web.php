@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/reposteria', function () {
+    return view('reposteria');
+});
+
+Route::get('/manualidades', function () {
+    return view('manualidades');
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});

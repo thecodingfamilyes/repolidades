@@ -9208,3 +9208,22 @@ a.text-dark:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.btn-primary-brand {
+  background: #f4645f;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .mw-md-75 {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .mw-lg-50 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+

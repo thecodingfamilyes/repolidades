@@ -1,4 +1,3 @@
-
 // Body
 $body-bg: #f5f8fa;
 
@@ -15,6 +14,8 @@ $brand-info: #8eb4cb;
 $brand-success: #2ab27b;
 $brand-warning: #cbb956;
 $brand-danger: #bf5329;
+
+$brand-primary-color: #f4645f;
 
 // Typography
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
@@ -36,3 +37,6 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// Colors
+$white: #fff;

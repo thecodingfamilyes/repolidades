@@ -4,6 +4,7 @@
 
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "_variables";
 
 .full-content {
 	position: absolute;
@@ -23,4 +24,23 @@
 
 .overlay-dark {
 	background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary-brand {
+	background: $brand-primary-color;
+	color: $white;
+}
+
+@include media-breakpoint-up(md) {
+	.mw-md-75 {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.mw-lg-50 {
+		max-width: 50%;
+		margin: 0 auto;
+	}
 }
