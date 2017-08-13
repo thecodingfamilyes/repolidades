@@ -10,8 +10,8 @@
 					<h1 class="cover-heading">Repostería y Manualidades</h1>
 					<p class="lead">Repostería y manualidades 100% caseras para cualquier ocasión, totalmente personalizadas y realizadas con todo el cariño. Echa un vistazo a nuestros catálogos.</p>
 					<p class="lead">
-						<a href="{{ url('/reposteria') }}" class="btn btn-lg btn-primary-brand">Repostería</a>
-						<a href="{{ url('/manualidades') }}" class="btn btn-lg btn-primary-brand">Manualidades</a>
+						<a href="{{ url('/catalog/reposteria') }}" class="btn btn-lg btn-primary-brand">Repostería</a>
+						<a href="{{ url('/catalog/manualidades') }}" class="btn btn-lg btn-primary-brand">Manualidades</a>
 					</p>
 				</div>
 			</div>

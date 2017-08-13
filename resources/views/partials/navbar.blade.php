@@ -8,8 +8,8 @@
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
 			<a class="nav-item nav-link {{ Request::path() == '/' ? 'active' : '' }}" href="{{ url('/') }}">Inicio</a>
-			<a class="nav-item nav-link {{ Request::path() == 'reposteria' ? 'active' : '' }}" href="{{ url('/reposteria') }}">Repostería</a>
-			<a class="nav-item nav-link {{ Request::path() == 'manualidades' ? 'active' : '' }}" href="{{ url('/manualidades') }}">Manualidades</a>
+			<a class="nav-item nav-link {{ Request::path() == 'catalog/reposteria' ? 'active' : '' }}" href="{{ url('/catalog/reposteria') }}">Repostería</a>
+			<a class="nav-item nav-link {{ Request::path() == 'catalog/manualidades' ? 'active' : '' }}" href="{{ url('/catalog/manualidades') }}">Manualidades</a>
 			<a class="nav-item nav-link {{ Request::path() == 'contacto' ? 'active' : '' }}" href="{{ url('/contacto') }}">Contacto</a>
 		</div>
 	</div>

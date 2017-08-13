@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index($category = 'reposteria')
     {
-		return view('catalog', ['data' => Product::all()]);
+		$title = $category;
+		$title = ($title == 'reposteria') ? 'repostería' : $category;
+		return view('catalog', ['data' => Product::all()->where('category', '=', $category), 'title' => $title]);
     }
 
     /**

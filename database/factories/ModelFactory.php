@@ -25,11 +25,18 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
+	$categories = [
+		'reposteria' => 'RP',
+		'manualidades' => 'MN'
+	];
+
+	$category = $faker->randomElement(array_keys($categories));
+
 	return [
-		'reference' => $faker->numerify('RP-###'),
+		'reference' => $faker->numerify($categories[$category] . '-###'),
 		'name' => $faker->name,
 		'description' => $faker->text(250),
 		'price' => $faker->randomFloat(2, 0, 99.99),
-		'category' => $faker->word
+		'category' => $category
 	];
 });
