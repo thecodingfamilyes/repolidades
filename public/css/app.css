@@ -9208,9 +9208,25 @@ a.text-dark:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.btn-primary-brand {
+a.btn-primary-brand {
   background: #f4645f;
   color: #fff;
+  text-decoration: none;
+}
+
+a.btn-primary-brand:hover {
+  background: #f1362f;
+  -webkit-column-rule: #fff;
+          column-rule: #fff;
+}
+
+a.btn-primary-brand:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-space {
+  margin-top: 3rem;
 }
 
 @media (min-width: 768px) {

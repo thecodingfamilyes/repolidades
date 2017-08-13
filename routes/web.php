@@ -15,13 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/reposteria', function () {
+/*Route::get('/reposteria', function () {
     return view('reposteria');
-});
+});*/
 
-Route::get('/manualidades', function () {
-    return view('manualidades');
-});
+Route::get('/catalog/{category?}', 'ProductController@index');
+
+
+Route::resource('catalog', 'ProductController');
+
 
 Route::get('/contacto', function () {
     return view('contacto');

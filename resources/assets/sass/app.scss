@@ -26,9 +26,23 @@
 	background: rgba(0, 0, 0, 0.5);
 }
 
-.btn-primary-brand {
+a.btn-primary-brand {
 	background: $brand-primary-color;
 	color: $white;
+	text-decoration: none;
+
+	&:hover {
+		background: darken($brand-primary-color, 10%);
+		column-rule: $white;
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.navbar-space {
+	margin-top: $navbar-brand-height + $navbar-padding-y;
 }
 
 @include media-breakpoint-up(md) {
