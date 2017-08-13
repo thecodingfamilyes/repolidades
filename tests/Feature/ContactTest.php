@@ -37,5 +37,6 @@ class ContactTest extends TestCase
         });
 
         $response->assertRedirect('/contacto');
+        $response->assertSessionHas('email_sent', true);
     }
 }
