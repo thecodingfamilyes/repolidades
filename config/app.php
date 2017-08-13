@@ -179,6 +179,7 @@ return [
 
         //vendors
         App\Providers\RouteServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
