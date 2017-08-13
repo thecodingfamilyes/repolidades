@@ -9,6 +9,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProductTest extends TestCase
 {
+
+	use DatabaseMigrations;
+
 	/** @test */
 	public function display_categorized_products_list()
 	{
