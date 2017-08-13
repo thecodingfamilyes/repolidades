@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
 		$title = $category;
 		$title = ($title == 'reposteria') ? 'repostería' : $category;
-		return view('catalog', ['data' => Product::all()->where('category', '=', $category), 'title' => $title]);
+		return view('catalog', ['data' => Product::where('category', '=', $category)->get(), 'title' => $title]);
     }
 
     /**
