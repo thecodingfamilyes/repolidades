@@ -26,3 +26,5 @@ Route::get('/manualidades', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
+
+Route::post('/contacto', 'ContactController@send');
