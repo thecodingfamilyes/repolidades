@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
 @import "_variables";
+@import "node_modules/bootstrap/scss/bootstrap";
 
 .full-content {
 	position: absolute;
@@ -24,21 +24,6 @@
 
 .overlay-dark {
 	background: rgba(0, 0, 0, 0.5);
-}
-
-a.btn-primary-brand {
-	background: $brand-primary-color;
-	color: $white;
-	text-decoration: none;
-
-	&:hover {
-		background: darken($brand-primary-color, 10%);
-		column-rule: $white;
-	}
-
-	&:focus {
-		box-shadow: none;
-	}
 }
 
 .navbar-space {
