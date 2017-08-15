@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
 @section('title', 'Contacto')
 
 @section('content')
 
-    <div style="margin-top: 60px;" class="container">
-      <h1 class="text-center">Contacto</h1>
+    <div class="container">
+      <h1 class="text-center mt-2">Contacto</h1>
 
         @if (!session('email_sent'))
     		<div class="p-3">

@@ -3,8 +3,8 @@
 @section('title', 'Repostería')
 
 @section('content')
-	<h1 class="text-center">{{ ucfirst($title) }}</h1>
-	<p class="text-center px-3">En esta sección podrás encontrar una gran variedad de productos de repostería 100% caseros.</p>
+	<h1 class="text-center mt-2">{{ ucfirst($title) }}</h1>
+	<p class="text-center px-3 mb-4 mw-md-75 mw-lg-50">En esta sección podrás encontrar una amplia variedad de productos 100% caseros.</p>
 	<div class="catalog-wrapper mw-md-75">
 		@php
 			$columns = 2;
