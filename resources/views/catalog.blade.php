@@ -14,7 +14,7 @@
 			<div class="card-deck mb-3">
 				@foreach ($row as $product)
 					<div class="card">
-						<img class="card-img-top" src="http://4.bp.blogspot.com/-W3leNQisv_k/T-rl5Vb09fI/AAAAAAAAAkA/1C-16fq2tGQ/s1600/tarta+de+queso.pngs" alt="Card image cap">
+						<img class="card-img-top" src="{{ $product->image }}" alt="Card image cap">
 						<div class="card-body">
 							<h4 class="card-title">{{ $product->name }}</h4>
 							<p class="card-text">{{ $product->reference }}</p>

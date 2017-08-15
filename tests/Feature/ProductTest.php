@@ -6,6 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ProductTest extends TestCase
 {
@@ -32,7 +33,19 @@ class ProductTest extends TestCase
 				$response->assertSee($product->category);
 			}
 		}
-
 	}
 
+	/** @test */
+	public function unknown_categories_throw_error()
+	{
+		try {
+			$response = $this->get('/catalog/tusmuelas');
+		} catch (NotFoundHttpException $e) {
+			$this->assertTrue(true);
+
+			return;
+		}
+
+		$this->fail('Unknown category does not return a 404 error');
+	}
 }

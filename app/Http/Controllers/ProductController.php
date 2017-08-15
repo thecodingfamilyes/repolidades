@@ -14,6 +14,12 @@ class ProductController extends Controller
      */
     public function index($category = 'reposteria')
     {
+		$validcategories = ['reposteria', 'manualidades'];
+
+		if (!in_array($category, $validcategories)) {
+			abort(404);
+		}
+
 		$title = $category;
 		$title = ($title == 'reposteria') ? 'repostería' : $category;
 		return view('catalog', ['data' => Product::where('category', '=', $category)->get(), 'title' => $title]);

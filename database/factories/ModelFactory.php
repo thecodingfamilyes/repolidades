@@ -37,6 +37,7 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
 		'name' => $faker->name,
 		'description' => $faker->text(250),
 		'price' => $faker->randomFloat(2, 0, 99.99),
-		'category' => $category
+		'category' => $category,
+		'image' => $faker->imageUrl(1280, 720, 'food')
 	];
 });
