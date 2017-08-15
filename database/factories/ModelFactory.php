@@ -34,7 +34,7 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
 
 	return [
 		'reference' => $faker->numerify($categories[$category] . '-###'),
-		'name' => $faker->name,
+		'name' => $faker->text(60),
 		'description' => $faker->text(250),
 		'price' => $faker->randomFloat(2, 0, 99.99),
 		'category' => $category,
