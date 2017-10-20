@@ -22,9 +22,11 @@ class AddVoyagerUserFields extends Migration
      */
     public function down()
     {
-        Schema::table('users', function ($table) {
-            $table->dropColumn('avatar');
-            $table->dropColumn('role_id');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('users', function ($table) {
+                $table->dropColumn('avatar');
+                $table->dropColumn('role_id');
+            });
+        }
     }
 }

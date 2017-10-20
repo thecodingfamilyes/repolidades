@@ -25,8 +25,10 @@ class AddOrderToDataRowsTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_rows', function (Blueprint $table) {
-            $table->dropColumn('order');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('data_rows', function (Blueprint $table) {
+                $table->dropColumn('order');
+            });
+        }
     }
 }

@@ -25,8 +25,10 @@ class AddGroupToSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('settings', function (Blueprint $table) {
-            $table->dropColumn('group');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('settings', function (Blueprint $table) {
+                $table->dropColumn('group');
+            });
+        }
     }
 }

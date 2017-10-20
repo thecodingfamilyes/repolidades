@@ -9,15 +9,15 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class HomeTest extends TestCase
 {
-    use DatabaseMigrations;
+    //use DatabaseMigrations;
 
     /** @test */
     public function display_sections_buttons()
     {
-    	$response = $this->get('/');
+        $response = $this->get('/');
 
-      $response->assertStatus(200);
-      $response->assertSee('Repostería');
-      $response->assertSee('Manualidades');
+        $response->assertStatus(200);
+        $response->assertSee('Repostería');
+        $response->assertSee('Manualidades');
     }
 }

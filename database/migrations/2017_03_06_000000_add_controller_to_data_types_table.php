@@ -25,8 +25,10 @@ class AddControllerToDataTypesTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_types', function (Blueprint $table) {
-            $table->dropColumn('controller');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('data_types', function (Blueprint $table) {
+                $table->dropColumn('controller');
+            });
+        }
     }
 }

@@ -25,8 +25,10 @@ class AddPermissionGroupIdToPermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('permissions', function (Blueprint $table) {
-            $table->dropColumn('permission_group_id');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('permissions', function (Blueprint $table) {
+                $table->dropColumn('permission_group_id');
+            });
+        }
     }
 }

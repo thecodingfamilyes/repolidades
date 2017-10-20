@@ -24,8 +24,10 @@ class AddPolicyNameToDataTypesTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_types', function (Blueprint $table) {
-            $table->dropColumn('policy_name');
-        });
+        if (!App::runningUnitTests()) {
+            Schema::table('data_types', function (Blueprint $table) {
+                $table->dropColumn('policy_name');
+            });
+        }
     }
 }

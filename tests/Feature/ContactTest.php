@@ -12,8 +12,6 @@ use App\Mail\CustomerContactConfirmation;
 
 class ContactTest extends TestCase
 {
-    use DatabaseMigrations;
-
     protected function setUp()
     {
         parent::setUp();
@@ -30,11 +28,11 @@ class ContactTest extends TestCase
             'body' => 'hello I want cakes!'
         ]);
 
-        Mail::assertSent(CustomerContact::class, function($mail) {
+        Mail::assertSent(CustomerContact::class, function ($mail) {
             return $mail->hasFrom('johnsmith@example.com');
         });
 
-        Mail::assertSent(CustomerContactConfirmation::class, function($mail) {
+        Mail::assertSent(CustomerContactConfirmation::class, function ($mail) {
             return $mail->hasTo('johnsmith@example.com');
         });
 
