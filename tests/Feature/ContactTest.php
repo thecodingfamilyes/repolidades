@@ -12,6 +12,8 @@ use App\Mail\CustomerContactConfirmation;
 
 class ContactTest extends TestCase
 {
+    use DatabaseMigrations;
+
     protected function setUp()
     {
         parent::setUp();
