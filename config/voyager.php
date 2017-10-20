@@ -91,7 +91,7 @@ return [
 
     'database' => [
         'tables' => [
-            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
+            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings', 'categories', 'menus', 'translations', 'pages', '', 'posts', 'permissions', 'sessions', 'users', 'roles', 'permission_groups'],
         ],
     ],
 
@@ -126,13 +126,13 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'es',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'es',
             //'pt',
         ],
     ],
@@ -166,9 +166,9 @@ return [
         ],
 
         'widgets' => [
-            'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
-            'TCG\\Voyager\\Widgets\\PageDimmer',
+            //'TCG\\Voyager\\Widgets\\UserDimmer',
+            //'TCG\\Voyager\\Widgets\\PostDimmer',
+            // 'TCG\\Voyager\\Widgets\\PageDimmer',
         ],
 
     ],

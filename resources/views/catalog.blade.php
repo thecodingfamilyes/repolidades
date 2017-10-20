@@ -14,7 +14,7 @@
 			<div class="card-deck mb-3">
 				@foreach ($row as $product)
 					<div class="card">
-						<img class="card-img-top" src="{{ $product->image }}" alt="Card image cap">
+						<img class="card-img-top" src="{{ starts_with($product->image, 'http') ? $product->image : Storage::url($product->image) }}" alt="{{ $product->name }}">
 						<div class="card-body">
 							<h4 class="card-title">{{ $product->name }}</h4>
 							<p class="card-text">{{ $product->reference }}</p>
