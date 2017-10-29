@@ -3,8 +3,6 @@
 		@include('partials.head')
 	</head>
 	<body>
-		@include('partials.navbar')
-
 		<div class="content-wrapper">
 			@yield('content')
 		</div>
